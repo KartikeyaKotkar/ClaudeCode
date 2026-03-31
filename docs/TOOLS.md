@@ -4,14 +4,14 @@ This document describes the model-callable tool surface visible in this source s
 
 It is intentionally conservative:
 
-- It is based on [src/tools.ts](/home/kk/Downloads/ClaudeCode/src/tools.ts) and the tool modules that file registers.
+- It is based on [src/tools.ts]( /ClaudeCode/src/tools.ts) and the tool modules that file registers.
 - It uses verified runtime tool names from constants or `buildTool({ name: ... })`.
 - It summarizes purpose from tool descriptions, prompts, and search hints present in source.
 - It does not invent input schemas beyond what is obvious from names and documented prompt text.
 
 ## How Tool Availability Works
 
-The source of truth for tool registration is [src/tools.ts](/home/kk/Downloads/ClaudeCode/src/tools.ts).
+The source of truth for tool registration is [src/tools.ts]( /ClaudeCode/src/tools.ts).
 
 Important behaviors visible there:
 
@@ -31,66 +31,66 @@ These are the main tools that are directly registered in the default base tool l
 
 | Tool name | Verified purpose | Source |
 | --- | --- | --- |
-| `Bash` | Execute shell commands | [src/tools/BashTool/toolName.ts](/home/kk/Downloads/ClaudeCode/src/tools/BashTool/toolName.ts) |
-| `Read` | Read files, images, PDFs, and notebooks from the local filesystem | [src/tools/FileReadTool/prompt.ts](/home/kk/Downloads/ClaudeCode/src/tools/FileReadTool/prompt.ts) |
-| `Edit` | Perform exact string replacements in files | [src/tools/FileEditTool/constants.ts](/home/kk/Downloads/ClaudeCode/src/tools/FileEditTool/constants.ts) |
-| `Write` | Create or overwrite files on the local filesystem | [src/tools/FileWriteTool/prompt.ts](/home/kk/Downloads/ClaudeCode/src/tools/FileWriteTool/prompt.ts) |
-| `Glob` | Find files by name pattern or wildcard | [src/tools/GlobTool/prompt.ts](/home/kk/Downloads/ClaudeCode/src/tools/GlobTool/prompt.ts) |
-| `Grep` | Search file contents with ripgrep and regex | [src/tools/GrepTool/prompt.ts](/home/kk/Downloads/ClaudeCode/src/tools/GrepTool/prompt.ts) |
-| `NotebookEdit` | Replace, insert, or delete notebook cell contents in `.ipynb` files | [src/tools/NotebookEditTool/prompt.ts](/home/kk/Downloads/ClaudeCode/src/tools/NotebookEditTool/prompt.ts) |
-| `PowerShell` | Execute Windows PowerShell commands | [src/tools/PowerShellTool/toolName.ts](/home/kk/Downloads/ClaudeCode/src/tools/PowerShellTool/toolName.ts) |
+| `Bash` | Execute shell commands | [src/tools/BashTool/toolName.ts]( /ClaudeCode/src/tools/BashTool/toolName.ts) |
+| `Read` | Read files, images, PDFs, and notebooks from the local filesystem | [src/tools/FileReadTool/prompt.ts]( /ClaudeCode/src/tools/FileReadTool/prompt.ts) |
+| `Edit` | Perform exact string replacements in files | [src/tools/FileEditTool/constants.ts]( /ClaudeCode/src/tools/FileEditTool/constants.ts) |
+| `Write` | Create or overwrite files on the local filesystem | [src/tools/FileWriteTool/prompt.ts]( /ClaudeCode/src/tools/FileWriteTool/prompt.ts) |
+| `Glob` | Find files by name pattern or wildcard | [src/tools/GlobTool/prompt.ts]( /ClaudeCode/src/tools/GlobTool/prompt.ts) |
+| `Grep` | Search file contents with ripgrep and regex | [src/tools/GrepTool/prompt.ts]( /ClaudeCode/src/tools/GrepTool/prompt.ts) |
+| `NotebookEdit` | Replace, insert, or delete notebook cell contents in `.ipynb` files | [src/tools/NotebookEditTool/prompt.ts]( /ClaudeCode/src/tools/NotebookEditTool/prompt.ts) |
+| `PowerShell` | Execute Windows PowerShell commands | [src/tools/PowerShellTool/toolName.ts]( /ClaudeCode/src/tools/PowerShellTool/toolName.ts) |
 
 ### Web and External Content
 
 | Tool name | Verified purpose | Source |
 | --- | --- | --- |
-| `WebFetch` | Fetch a URL, convert HTML to markdown, and answer a prompt about the content | [src/tools/WebFetchTool/prompt.ts](/home/kk/Downloads/ClaudeCode/src/tools/WebFetchTool/prompt.ts) |
-| `web_search` | Perform web search | [src/tools/WebSearchTool/WebSearchTool.ts](/home/kk/Downloads/ClaudeCode/src/tools/WebSearchTool/WebSearchTool.ts) |
-| `ListMcpResourcesTool` | List available resources from configured MCP servers | [src/tools/ListMcpResourcesTool/prompt.ts](/home/kk/Downloads/ClaudeCode/src/tools/ListMcpResourcesTool/prompt.ts) |
-| `ReadMcpResourceTool` | Read a specific MCP resource by server name and URI | [src/tools/ReadMcpResourceTool/prompt.ts](/home/kk/Downloads/ClaudeCode/src/tools/ReadMcpResourceTool/prompt.ts) |
-| `ToolSearch` | Search the currently available tool set | [src/tools/ToolSearchTool/ToolSearchTool.ts](/home/kk/Downloads/ClaudeCode/src/tools/ToolSearchTool/ToolSearchTool.ts) |
+| `WebFetch` | Fetch a URL, convert HTML to markdown, and answer a prompt about the content | [src/tools/WebFetchTool/prompt.ts]( /ClaudeCode/src/tools/WebFetchTool/prompt.ts) |
+| `web_search` | Perform web search | [src/tools/WebSearchTool/WebSearchTool.ts]( /ClaudeCode/src/tools/WebSearchTool/WebSearchTool.ts) |
+| `ListMcpResourcesTool` | List available resources from configured MCP servers | [src/tools/ListMcpResourcesTool/prompt.ts]( /ClaudeCode/src/tools/ListMcpResourcesTool/prompt.ts) |
+| `ReadMcpResourceTool` | Read a specific MCP resource by server name and URI | [src/tools/ReadMcpResourceTool/prompt.ts]( /ClaudeCode/src/tools/ReadMcpResourceTool/prompt.ts) |
+| `ToolSearch` | Search the currently available tool set | [src/tools/ToolSearchTool/ToolSearchTool.ts]( /ClaudeCode/src/tools/ToolSearchTool/ToolSearchTool.ts) |
 
 ### Agent, Skill, and User-Interaction Tools
 
 | Tool name | Verified purpose | Source |
 | --- | --- | --- |
-| `Agent` | Launch a new agent / delegate work to a subagent | [src/tools/AgentTool/AgentTool.tsx](/home/kk/Downloads/ClaudeCode/src/tools/AgentTool/AgentTool.tsx) |
-| `Task` | Legacy alias for `Agent` | [src/tools/AgentTool/constants.ts](/home/kk/Downloads/ClaudeCode/src/tools/AgentTool/constants.ts) |
-| `AskUserQuestion` | Ask the user multiple-choice questions | [src/tools/AskUserQuestionTool/prompt.ts](/home/kk/Downloads/ClaudeCode/src/tools/AskUserQuestionTool/prompt.ts) |
-| `Skill` | Invoke a slash-command skill | [src/tools/SkillTool/SkillTool.ts](/home/kk/Downloads/ClaudeCode/src/tools/SkillTool/SkillTool.ts) |
-| `SendUserMessage` | Send a message to the user | [src/tools/BriefTool/prompt.ts](/home/kk/Downloads/ClaudeCode/src/tools/BriefTool/prompt.ts) |
-| `Brief` | Legacy brief-tool name | [src/tools/BriefTool/prompt.ts](/home/kk/Downloads/ClaudeCode/src/tools/BriefTool/prompt.ts) |
+| `Agent` | Launch a new agent / delegate work to a subagent | [src/tools/AgentTool/AgentTool.tsx]( /ClaudeCode/src/tools/AgentTool/AgentTool.tsx) |
+| `Task` | Legacy alias for `Agent` | [src/tools/AgentTool/constants.ts]( /ClaudeCode/src/tools/AgentTool/constants.ts) |
+| `AskUserQuestion` | Ask the user multiple-choice questions | [src/tools/AskUserQuestionTool/prompt.ts]( /ClaudeCode/src/tools/AskUserQuestionTool/prompt.ts) |
+| `Skill` | Invoke a slash-command skill | [src/tools/SkillTool/SkillTool.ts]( /ClaudeCode/src/tools/SkillTool/SkillTool.ts) |
+| `SendUserMessage` | Send a message to the user | [src/tools/BriefTool/prompt.ts]( /ClaudeCode/src/tools/BriefTool/prompt.ts) |
+| `Brief` | Legacy brief-tool name | [src/tools/BriefTool/prompt.ts]( /ClaudeCode/src/tools/BriefTool/prompt.ts) |
 
 ### Planning, Tasks, and Session Control
 
 | Tool name | Verified purpose | Source |
 | --- | --- | --- |
-| `EnterPlanMode` | Request permission to enter plan mode for complex tasks requiring exploration and design | [src/tools/EnterPlanModeTool/EnterPlanModeTool.ts](/home/kk/Downloads/ClaudeCode/src/tools/EnterPlanModeTool/EnterPlanModeTool.ts) |
-| `ExitPlanModeV2` | Exit plan mode | [src/tools.ts](/home/kk/Downloads/ClaudeCode/src/tools.ts) |
-| `TodoWrite` | Create and manage a structured task list for the current session | [src/tools/TodoWriteTool/prompt.ts](/home/kk/Downloads/ClaudeCode/src/tools/TodoWriteTool/prompt.ts) |
-| `TaskStop` | Stop a running background task by ID | [src/tools/TaskStopTool/prompt.ts](/home/kk/Downloads/ClaudeCode/src/tools/TaskStopTool/prompt.ts) |
-| `TaskOutput` | Read output or logs from a background task | [src/tools/TaskOutputTool/TaskOutputTool.tsx](/home/kk/Downloads/ClaudeCode/src/tools/TaskOutputTool/TaskOutputTool.tsx) |
-| `TaskCreate` | Create a task in the task list | [src/tools/TaskCreateTool/TaskCreateTool.ts](/home/kk/Downloads/ClaudeCode/src/tools/TaskCreateTool/TaskCreateTool.ts) |
-| `TaskGet` | Retrieve a task by ID | [src/tools/TaskGetTool/TaskGetTool.ts](/home/kk/Downloads/ClaudeCode/src/tools/TaskGetTool/TaskGetTool.ts) |
-| `TaskUpdate` | Update a task | [src/tools/TaskUpdateTool/TaskUpdateTool.ts](/home/kk/Downloads/ClaudeCode/src/tools/TaskUpdateTool/TaskUpdateTool.ts) |
-| `TaskList` | List all tasks | [src/tools/TaskListTool/TaskListTool.ts](/home/kk/Downloads/ClaudeCode/src/tools/TaskListTool/TaskListTool.ts) |
+| `EnterPlanMode` | Request permission to enter plan mode for complex tasks requiring exploration and design | [src/tools/EnterPlanModeTool/EnterPlanModeTool.ts]( /ClaudeCode/src/tools/EnterPlanModeTool/EnterPlanModeTool.ts) |
+| `ExitPlanModeV2` | Exit plan mode | [src/tools.ts]( /ClaudeCode/src/tools.ts) |
+| `TodoWrite` | Create and manage a structured task list for the current session | [src/tools/TodoWriteTool/prompt.ts]( /ClaudeCode/src/tools/TodoWriteTool/prompt.ts) |
+| `TaskStop` | Stop a running background task by ID | [src/tools/TaskStopTool/prompt.ts]( /ClaudeCode/src/tools/TaskStopTool/prompt.ts) |
+| `TaskOutput` | Read output or logs from a background task | [src/tools/TaskOutputTool/TaskOutputTool.tsx]( /ClaudeCode/src/tools/TaskOutputTool/TaskOutputTool.tsx) |
+| `TaskCreate` | Create a task in the task list | [src/tools/TaskCreateTool/TaskCreateTool.ts]( /ClaudeCode/src/tools/TaskCreateTool/TaskCreateTool.ts) |
+| `TaskGet` | Retrieve a task by ID | [src/tools/TaskGetTool/TaskGetTool.ts]( /ClaudeCode/src/tools/TaskGetTool/TaskGetTool.ts) |
+| `TaskUpdate` | Update a task | [src/tools/TaskUpdateTool/TaskUpdateTool.ts]( /ClaudeCode/src/tools/TaskUpdateTool/TaskUpdateTool.ts) |
+| `TaskList` | List all tasks | [src/tools/TaskListTool/TaskListTool.ts]( /ClaudeCode/src/tools/TaskListTool/TaskListTool.ts) |
 
 ### Configuration, IDE, and Worktree Tools
 
 | Tool name | Verified purpose | Source |
 | --- | --- | --- |
-| `Config` | Get or set Claude Code configuration settings | [src/tools/ConfigTool/prompt.ts](/home/kk/Downloads/ClaudeCode/src/tools/ConfigTool/prompt.ts) |
-| `LSP` | Interact with Language Server Protocol servers for code intelligence | [src/tools/LSPTool/prompt.ts](/home/kk/Downloads/ClaudeCode/src/tools/LSPTool/prompt.ts) |
-| `EnterWorktree` | Create an isolated git worktree and switch into it | [src/tools/EnterWorktreeTool/EnterWorktreeTool.ts](/home/kk/Downloads/ClaudeCode/src/tools/EnterWorktreeTool/EnterWorktreeTool.ts) |
-| `ExitWorktree` | Exit a worktree session and return to the original directory | [src/tools/ExitWorktreeTool/ExitWorktreeTool.ts](/home/kk/Downloads/ClaudeCode/src/tools/ExitWorktreeTool/ExitWorktreeTool.ts) |
+| `Config` | Get or set Claude Code configuration settings | [src/tools/ConfigTool/prompt.ts]( /ClaudeCode/src/tools/ConfigTool/prompt.ts) |
+| `LSP` | Interact with Language Server Protocol servers for code intelligence | [src/tools/LSPTool/prompt.ts]( /ClaudeCode/src/tools/LSPTool/prompt.ts) |
+| `EnterWorktree` | Create an isolated git worktree and switch into it | [src/tools/EnterWorktreeTool/EnterWorktreeTool.ts]( /ClaudeCode/src/tools/EnterWorktreeTool/EnterWorktreeTool.ts) |
+| `ExitWorktree` | Exit a worktree session and return to the original directory | [src/tools/ExitWorktreeTool/ExitWorktreeTool.ts]( /ClaudeCode/src/tools/ExitWorktreeTool/ExitWorktreeTool.ts) |
 
 ### Team and Swarm Coordination
 
 | Tool name | Verified purpose | Source |
 | --- | --- | --- |
-| `SendMessage` | Send messages to agent teammates using the swarm protocol | [src/tools/SendMessageTool/SendMessageTool.ts](/home/kk/Downloads/ClaudeCode/src/tools/SendMessageTool/SendMessageTool.ts) |
-| `TeamCreate` | Create a new team for coordinating multiple agents | [src/tools/TeamCreateTool/TeamCreateTool.ts](/home/kk/Downloads/ClaudeCode/src/tools/TeamCreateTool/TeamCreateTool.ts) |
-| `TeamDelete` | Clean up team and task directories when the swarm is complete | [src/tools/TeamDeleteTool/TeamDeleteTool.ts](/home/kk/Downloads/ClaudeCode/src/tools/TeamDeleteTool/TeamDeleteTool.ts) |
+| `SendMessage` | Send messages to agent teammates using the swarm protocol | [src/tools/SendMessageTool/SendMessageTool.ts]( /ClaudeCode/src/tools/SendMessageTool/SendMessageTool.ts) |
+| `TeamCreate` | Create a new team for coordinating multiple agents | [src/tools/TeamCreateTool/TeamCreateTool.ts]( /ClaudeCode/src/tools/TeamCreateTool/TeamCreateTool.ts) |
+| `TeamDelete` | Clean up team and task directories when the swarm is complete | [src/tools/TeamDeleteTool/TeamDeleteTool.ts]( /ClaudeCode/src/tools/TeamDeleteTool/TeamDeleteTool.ts) |
 
 ## Runtime Notes for Core Tools
 
@@ -104,8 +104,8 @@ The file tools have explicit coordination rules:
 
 Relevant files:
 
-- [src/tools/FileEditTool/prompt.ts](/home/kk/Downloads/ClaudeCode/src/tools/FileEditTool/prompt.ts)
-- [src/tools/FileWriteTool/prompt.ts](/home/kk/Downloads/ClaudeCode/src/tools/FileWriteTool/prompt.ts)
+- [src/tools/FileEditTool/prompt.ts]( /ClaudeCode/src/tools/FileEditTool/prompt.ts)
+- [src/tools/FileWriteTool/prompt.ts]( /ClaudeCode/src/tools/FileWriteTool/prompt.ts)
 
 ### Search tools vs shell search
 
@@ -117,8 +117,8 @@ The source explicitly prefers dedicated search tools over shell search:
 
 Relevant files:
 
-- [src/tools/GrepTool/prompt.ts](/home/kk/Downloads/ClaudeCode/src/tools/GrepTool/prompt.ts)
-- [src/tools/GlobTool/prompt.ts](/home/kk/Downloads/ClaudeCode/src/tools/GlobTool/prompt.ts)
+- [src/tools/GrepTool/prompt.ts]( /ClaudeCode/src/tools/GrepTool/prompt.ts)
+- [src/tools/GlobTool/prompt.ts]( /ClaudeCode/src/tools/GlobTool/prompt.ts)
 
 ### Plan mode tools
 
@@ -129,8 +129,8 @@ The planning flow is explicit in source:
 
 Relevant files:
 
-- [src/tools/EnterPlanModeTool/prompt.ts](/home/kk/Downloads/ClaudeCode/src/tools/EnterPlanModeTool/prompt.ts)
-- [src/tools/AskUserQuestionTool/prompt.ts](/home/kk/Downloads/ClaudeCode/src/tools/AskUserQuestionTool/prompt.ts)
+- [src/tools/EnterPlanModeTool/prompt.ts]( /ClaudeCode/src/tools/EnterPlanModeTool/prompt.ts)
+- [src/tools/AskUserQuestionTool/prompt.ts]( /ClaudeCode/src/tools/AskUserQuestionTool/prompt.ts)
 
 ### Task tracking split
 
@@ -158,7 +158,7 @@ The registry only includes the V2 task tools when `isTodoV2Enabled()` is true.
 
 ### Conditional tools referenced in the registry but not documented here in depth
 
-These names are directly referenced in [src/tools.ts](/home/kk/Downloads/ClaudeCode/src/tools.ts), but this snapshot does not provide enough local implementation detail to document them to the same standard:
+These names are directly referenced in [src/tools.ts]( /ClaudeCode/src/tools.ts), but this snapshot does not provide enough local implementation detail to document them to the same standard:
 
 - `TungstenTool`
 - `SuggestBackgroundPRTool`
@@ -197,7 +197,7 @@ If coordinator mode is also active, the source adds:
 
 Relevant file:
 
-- [src/tools.ts](/home/kk/Downloads/ClaudeCode/src/tools.ts)
+- [src/tools.ts]( /ClaudeCode/src/tools.ts)
 
 ### Deny-rule filtering
 
@@ -205,7 +205,7 @@ Before tools are exposed to the model, `filterToolsByDenyRules()` removes tools 
 
 Relevant file:
 
-- [src/tools.ts](/home/kk/Downloads/ClaudeCode/src/tools.ts)
+- [src/tools.ts]( /ClaudeCode/src/tools.ts)
 
 ### REPL mode
 
@@ -213,11 +213,11 @@ When REPL mode is enabled, primitive tools can be hidden from direct use and acc
 
 Relevant files:
 
-- [src/tools.ts](/home/kk/Downloads/ClaudeCode/src/tools.ts)
-- [src/tools/REPLTool/constants.ts](/home/kk/Downloads/ClaudeCode/src/tools/REPLTool/constants.ts)
+- [src/tools.ts]( /ClaudeCode/src/tools.ts)
+- [src/tools/REPLTool/constants.ts]( /ClaudeCode/src/tools/REPLTool/constants.ts)
 
 ## Related Files
 
-- [src/tools.ts](/home/kk/Downloads/ClaudeCode/src/tools.ts)
-- [src/Tool.ts](/home/kk/Downloads/ClaudeCode/src/Tool.ts)
-- [src/tasks/](/home/kk/Downloads/ClaudeCode/src/tasks/)
+- [src/tools.ts]( /ClaudeCode/src/tools.ts)
+- [src/Tool.ts]( /ClaudeCode/src/Tool.ts)
+- [src/tasks/]( /ClaudeCode/src/tasks/)
