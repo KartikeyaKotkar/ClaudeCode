@@ -4,13 +4,13 @@ This document describes the command surface visible in this source snapshot.
 
 It is intentionally conservative:
 
-- It documents commands registered in [src/commands.ts](/home/kk/Downloads/ClaudeCode/src/commands.ts).
+- It documents commands registered in [src/commands.ts](/home/kk/Downloads /src/commands.ts).
 - It uses names, aliases, descriptions, and visibility rules that are directly present in source.
 - It does not invent full CLI syntax for commands whose argument handling lives in lazily loaded modules.
 
 ## How Commands Are Assembled
 
-Built-in commands are registered in [src/commands.ts](/home/kk/Downloads/ClaudeCode/src/commands.ts).
+Built-in commands are registered in [src/commands.ts](/home/kk/Downloads /src/commands.ts).
 
 At runtime, `getCommands()` can also add:
 
@@ -153,7 +153,7 @@ These commands are present in source but are hidden, internal-only, or clearly n
 
 ### Internal-only commands referenced in `INTERNAL_ONLY_COMMANDS`
 
-These are explicitly assembled into the command list only for certain internal runtime conditions in [src/commands.ts](/home/kk/Downloads/ClaudeCode/src/commands.ts).
+These are explicitly assembled into the command list only for certain internal runtime conditions in [src/commands.ts](/home/kk/Downloads /src/commands.ts).
 
 | Command name in source | Notes |
 | --- | --- |
@@ -206,7 +206,7 @@ Several command directories export stub commands with `isEnabled: () => false` a
 
 ## Related Files
 
-- [src/commands.ts](/ClaudeCode/src/commands.ts)
-- [src/main.tsx](/ClaudeCode/src/main.tsx)
-- [src/skills/loadSkillsDir.ts](/ClaudeCode/src/skills/loadSkillsDir.ts)
-- [src/utils/plugins/loadPluginCommands.ts](/ClaudeCode/src/utils/plugins/loadPluginCommands.ts)
+- [src/commands.ts]( /src/commands.ts)
+- [src/main.tsx]( /src/main.tsx)
+- [src/skills/loadSkillsDir.ts]( /src/skills/loadSkillsDir.ts)
+- [src/utils/plugins/loadPluginCommands.ts]( /src/utils/plugins/loadPluginCommands.ts)
