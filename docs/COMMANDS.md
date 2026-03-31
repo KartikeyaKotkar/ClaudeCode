@@ -206,7 +206,7 @@ Several command directories export stub commands with `isEnabled: () => false` a
 
 ## Related Files
 
-- [src/commands.ts](/home/kk/Downloads/ClaudeCode/src/commands.ts)
-- [src/main.tsx](/home/kk/Downloads/ClaudeCode/src/main.tsx)
-- [src/skills/loadSkillsDir.ts](/home/kk/Downloads/ClaudeCode/src/skills/loadSkillsDir.ts)
-- [src/utils/plugins/loadPluginCommands.ts](/home/kk/Downloads/ClaudeCode/src/utils/plugins/loadPluginCommands.ts)
+- [src/commands.ts](/ClaudeCode/src/commands.ts)
+- [src/main.tsx](/ClaudeCode/src/main.tsx)
+- [src/skills/loadSkillsDir.ts](/ClaudeCode/src/skills/loadSkillsDir.ts)
+- [src/utils/plugins/loadPluginCommands.ts](/ClaudeCode/src/utils/plugins/loadPluginCommands.ts)
