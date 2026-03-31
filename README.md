@@ -37,9 +37,9 @@ From inspection of the files present here, this snapshot appears to include:
 
 ## Supporting Notes
 
-- [docs/ARCHITECTURE.md](/home/kk/Downloads/ClaudeCode/docs/ARCHITECTURE.md)
-- [docs/COMMANDS.md](/home/kk/Downloads/ClaudeCode/docs/COMMANDS.md)
-- [docs/TOOLS.md](/home/kk/Downloads/ClaudeCode/docs/TOOLS.md)
+- [docs/ARCHITECTURE.md]( /ClaudeCode/docs/ARCHITECTURE.md)
+- [docs/COMMANDS.md]( /ClaudeCode/docs/COMMANDS.md)
+- [docs/TOOLS.md]( /ClaudeCode/docs/TOOLS.md)
 
 ## Risk Note
 
