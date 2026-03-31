@@ -4,14 +4,14 @@ This document describes the model-callable tool surface visible in this source s
 
 It is intentionally conservative:
 
-- It is based on [src/tools.ts]( /src/tools.ts) and the tool modules that file registers.
+- It is based on [src/tools.ts](/src/tools.ts) and the tool modules that file registers.
 - It uses verified runtime tool names from constants or `buildTool({ name: ... })`.
 - It summarizes purpose from tool descriptions, prompts, and search hints present in source.
 - It does not invent input schemas beyond what is obvious from names and documented prompt text.
 
 ## How Tool Availability Works
 
-The source of truth for tool registration is [src/tools.ts]( /src/tools.ts).
+The source of truth for tool registration is [src/tools.ts](/src/tools.ts).
 
 Important behaviors visible there:
 
@@ -104,8 +104,8 @@ The file tools have explicit coordination rules:
 
 Relevant files:
 
-- [src/tools/FileEditTool/prompt.ts]( /src/tools/FileEditTool/prompt.ts)
-- [src/tools/FileWriteTool/prompt.ts]( /src/tools/FileWriteTool/prompt.ts)
+- [src/tools/FileEditTool/prompt.ts](/src/tools/FileEditTool/prompt.ts)
+- [src/tools/FileWriteTool/prompt.ts](/src/tools/FileWriteTool/prompt.ts)
 
 ### Search tools vs shell search
 
@@ -117,8 +117,8 @@ The source explicitly prefers dedicated search tools over shell search:
 
 Relevant files:
 
-- [src/tools/GrepTool/prompt.ts]( /src/tools/GrepTool/prompt.ts)
-- [src/tools/GlobTool/prompt.ts]( /src/tools/GlobTool/prompt.ts)
+- [src/tools/GrepTool/prompt.ts](/src/tools/GrepTool/prompt.ts)
+- [src/tools/GlobTool/prompt.ts](/src/tools/GlobTool/prompt.ts)
 
 ### Plan mode tools
 
@@ -129,8 +129,8 @@ The planning flow is explicit in source:
 
 Relevant files:
 
-- [src/tools/EnterPlanModeTool/prompt.ts]( /src/tools/EnterPlanModeTool/prompt.ts)
-- [src/tools/AskUserQuestionTool/prompt.ts]( /src/tools/AskUserQuestionTool/prompt.ts)
+- [src/tools/EnterPlanModeTool/prompt.ts](/src/tools/EnterPlanModeTool/prompt.ts)
+- [src/tools/AskUserQuestionTool/prompt.ts](/src/tools/AskUserQuestionTool/prompt.ts)
 
 ### Task tracking split
 
@@ -158,7 +158,7 @@ The registry only includes the V2 task tools when `isTodoV2Enabled()` is true.
 
 ### Conditional tools referenced in the registry but not documented here in depth
 
-These names are directly referenced in [src/tools.ts]( /src/tools.ts), but this snapshot does not provide enough local implementation detail to document them to the same standard:
+These names are directly referenced in [src/tools.ts](/src/tools.ts), but this snapshot does not provide enough local implementation detail to document them to the same standard:
 
 - `TungstenTool`
 - `SuggestBackgroundPRTool`
@@ -197,7 +197,7 @@ If coordinator mode is also active, the source adds:
 
 Relevant file:
 
-- [src/tools.ts]( /src/tools.ts)
+- [src/tools.ts](/src/tools.ts)
 
 ### Deny-rule filtering
 
@@ -205,7 +205,7 @@ Before tools are exposed to the model, `filterToolsByDenyRules()` removes tools 
 
 Relevant file:
 
-- [src/tools.ts]( /src/tools.ts)
+- [src/tools.ts](/src/tools.ts)
 
 ### REPL mode
 
@@ -213,11 +213,11 @@ When REPL mode is enabled, primitive tools can be hidden from direct use and acc
 
 Relevant files:
 
-- [src/tools.ts]( /src/tools.ts)
-- [src/tools/REPLTool/constants.ts]( /src/tools/REPLTool/constants.ts)
+- [src/tools.ts](/src/tools.ts)
+- [src/tools/REPLTool/constants.ts](/src/tools/REPLTool/constants.ts)
 
 ## Related Files
 
-- [src/tools.ts]( /src/tools.ts)
-- [src/Tool.ts]( /src/Tool.ts)
-- [src/tasks/]( /src/tasks/)
+- [src/tools.ts](/src/tools.ts)
+- [src/Tool.ts](/src/Tool.ts)
+- [src/tasks/](/src/tasks/)
