@@ -10,7 +10,7 @@ It is intentionally conservative:
 
 ## How Commands Are Assembled
 
-Built-in commands are registered in [src/commands.ts](/home/kk/Downloads /src/commands.ts).
+Built-in commands are registered in [src/commands.ts](/src/commands.ts).
 
 At runtime, `getCommands()` can also add:
 
@@ -206,7 +206,7 @@ Several command directories export stub commands with `isEnabled: () => false` a
 
 ## Related Files
 
-- [src/commands.ts]( /src/commands.ts)
-- [src/main.tsx]( /src/main.tsx)
-- [src/skills/loadSkillsDir.ts]( /src/skills/loadSkillsDir.ts)
-- [src/utils/plugins/loadPluginCommands.ts]( /src/utils/plugins/loadPluginCommands.ts)
+- [src/commands.ts](/src/commands.ts)
+- [src/main.tsx](/src/main.tsx)
+- [src/skills/loadSkillsDir.ts](/src/skills/loadSkillsDir.ts)
+- [src/utils/plugins/loadPluginCommands.ts](/src/utils/plugins/loadPluginCommands.ts)
